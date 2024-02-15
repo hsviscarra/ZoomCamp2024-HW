@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
 select 
-    locationid, 
+    locationid,
     borough, 
     zone, 
     replace(service_zone,'Boro','Green') as service_zone 
