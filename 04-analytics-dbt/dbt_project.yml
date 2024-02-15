@@ -1,7 +1,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: '04-analytics-dbt'
+name: 'analytics-dbt'
 version: '1.0.0'
 config-version: 2
 
@@ -35,7 +35,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  04-analytics-dbt:
+  analytics-dbt:
       # Applies to all files under models/.../
       staging:
           materialized: view
