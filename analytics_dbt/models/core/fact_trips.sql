@@ -23,6 +23,7 @@ dim_zones as (
     select * from {{ ref('dim_zones') }}
     where borough != 'Unknown'
 )
+
 select trips_unioned.tripid, 
     trips_unioned.vendorid, 
     trips_unioned.service_type,
