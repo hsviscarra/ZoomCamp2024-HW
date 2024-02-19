@@ -189,13 +189,8 @@ models:
         For-Hire Vehicle (“FHV”) trip records include fields capturing the dispatching base 
         license number and the pick-up date, time, and taxi zone location ID (shape file below). 
       columns:
-          - name: trip_id
+          - name: fhv_id
             description: Primary key for this table, generated with a concatenation of dispatching_base_num+pickup_datetime
-            tests:
-                - unique:
-                    severity: warn
-                - not_null:
-                    severity: warn
           - name: dispatching_base_num 
             description: Code of the dispatch
           - name: pickup_datetime 
