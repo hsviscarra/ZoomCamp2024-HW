@@ -10,6 +10,7 @@ with
 source as (
 
     select * from {{ source('staging', 'fhv_tripdata_02') }}
+    where extract(year from pickup_datetime) = 2019
 
 ),
 
@@ -34,7 +35,7 @@ select * from renamed
 
 
 -- dbt build --select <model.sql> --vars '{'is_test_run: false}'
-{% if var('is_test_run', default=true) %}
+{% if var('is_test_run', default=false) %}
 
   limit 100
 
